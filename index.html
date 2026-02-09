@@ -512,69 +512,84 @@
 <img src="images/led layout.png" alt="CFG-X1204 LED Layout" class="manual-img w-medium">
 <p class="img-caption">Figure 6. Status LED (A, B, C, D) Location on Bracket</p>
 
-<table>
-    <thead>
-        <tr>
-            <th>LED Color</th>
-            <th>Lamp Status</th>
-            <th>Definition</th>
-            <th>Directions (상세 상태 설명)</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Off</td><td>Off</td><td>Off</td>
-            <td>System Off. Power is not on.</td>
-        </tr>
-        <tr>
-            <td style="color: #e67e22; font-weight: bold;">Orange</td><td>Solid orange</td><td>Host Init.</td>
-            <td>System booting. (시스템 부팅 및 초기화 중)</td>
-        </tr>
-        <tr>
-            <td style="color: #27ae60; font-weight: bold;">Green</td><td>Solid green</td><td>Waiting</td>
-            <td>Device / Host connected, but no data being transferred.</td>
-        </tr>
-        <tr>
-            <td style="color: #e67e22; font-weight: bold;">Orange</td><td>Flash 1Hz</td><td>Waiting</td>
-            <td>Device / Host connected, waiting for event (e.g. Trigger).</td>
-        </tr>
-        <tr>
-            <td style="color: #c0392b; font-weight: bold;">Red</td><td>Solid Red</td><td>Error</td>
-            <td>The PoCXP over-current protection has tripped. (과전류 보호 작동)</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold;"><span style="color: #27ae60;">Green</span> / <span style="color: #e67e22;">Orange</span></td>
-            <td>Alternative Flash 5Hz</td><td>Device detect</td>
-            <td>Connection detection in progress, PoCXP active. (G:40ms / O:40ms)</td>
-        </tr>
-        <tr>
-            <td style="color: #e67e22; font-weight: bold;">Orange</td><td>Flash 10Hz</td><td>Device detect</td>
-            <td>Connection detection in progress, PoCXP not in use. (40ms On / 60ms Off)</td>
-        </tr>
-        <tr>
-            <td style="color: #27ae60; font-weight: bold;">Green</td><td>Flash 5Hz</td><td>Streaming</td>
-            <td>The Device to Host connection is established and image data is being transferred.</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold;"><span style="color: #c0392b;">Red</span> / <span style="color: #27ae60;">Green</span></td>
-            <td>Alternative Flash 0.5Hz</td><td>System status</td>
-            <td>Device / Host incompatible, PoCXP active. (R:1s / G:1s)</td>
-        </tr>
-        <tr>
-            <td style="font-weight: bold;"><span style="color: #c0392b;">Red</span> / <span style="color: #e67e22;">Orange</span></td>
-            <td>Alternative Flash 0.5Hz</td><td>System status</td>
-            <td>Device / Host incompatible, PoCXP not in use. (R:1s / O:1s)</td>
-        </tr>
-        <tr>
-            <td style="color: #c0392b; font-weight: bold;">Red</td><td>Flash 1Hz</td><td>System status</td>
-            <td>Error during data transfer (e.g. CRC error).</td>
-        </tr>
-        <tr>
-            <td style="color: #c0392b; font-weight: bold;">Red</td><td>Flash 10Hz</td><td>Error</td>
-            <td>Host system error (e.g. internal error).</td>
-        </tr>
-    </tbody>
-</table>
+<table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+        <thead>
+            <tr style="background-color: #2c3e50; color: white;">
+                <th style="border: 1px solid #dee2e6; padding: 12px;">LED</th>
+                <th style="border: 1px solid #dee2e6; padding: 12px;">Lamp status</th>
+                <th style="border: 1px solid #dee2e6; padding: 12px;">Definition</th>
+                <th style="border: 1px solid #dee2e6; padding: 12px;">Directions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center;">Off</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Off</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Off</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">System Off. Power is not on</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; color: orange; font-weight: bold;">Orange</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Solid orange</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Host Init.</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">System booting</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; color: green; font-weight: bold;">Green</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Solid green</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Waiting</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Device / Host connected, but no data being transferred.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; color: red; font-weight: bold;">Red</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Solid Red</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Error</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">The PoCXP over-current protection has tripped.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; color: orange; font-weight: bold;">Orange</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Flash 1 Orange</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Waiting</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Device / Host connected, waiting for event( e.g. Trigger)</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; font-weight: bold;"><span style="color: green;">Green</span>/<span style="color: orange;">orange</span></td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">AlternateFlash 12.5</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Device detect</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Connection detection in progress, PoCXP active.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; font-weight: bold;"><span style="color: green;">Green</span>/<span style="color: orange;">orange</span></td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">AlternateFlash 0.5</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Test</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Connection test packets being sent</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; color: green; font-weight: bold;">Green</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Flash 12.5 Green</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Streaming</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">The Device to Host connection is established</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; color: red; font-weight: bold;">Red</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Flash 1 Red</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">System status</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Host is powered on but no device is connected.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; color: red; font-weight: bold;">Red</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Flash 0.5 Red</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Error</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">CRC or bit-error detected during transfer.</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid #dee2e6; padding: 10px; text-align: center; color: red; font-weight: bold;">Red</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Flash 12.5 Red</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Error</td>
+                <td style="border: 1px solid #dee2e6; padding: 10px;">Host system error. ( e.g. internal error)</td>
+            </tr>
+        </tbody>
+    </table>
 <h2 id="sec3-6">3.6 Electrical Specification</h2>
 
 <h3 id="sec3-6-1">3.6.1 CoaXPress Host Interface</h3>
@@ -1379,4 +1394,5 @@
 
 </body>
 </html>
+
 
